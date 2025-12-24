@@ -1,23 +1,45 @@
+@font-face {
+    font-family: 'rainyhearts';
+    src: url("/assets/fonts/rainyhearts.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --main-font: 'rainyhearts', monospace, sans-serif;
+    --main-size: 18px;
+    --darkorange: darkorange;
+    --orange: orange;
+    --white: white;
+    --dimgray: dimgray;
+    --darkgray: #202020;
+    --black: black;
+}
+
+body.readable-font {
+    --main-font: 'Tahoma', sans-serif;
+    --main-size: 14px;
+}
 
 body {
-    background: black url('/assets/images/1019.png');
-    color: white;
-    font-family: Tahoma, Verdana, Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    background: var(--black) url('/assets/images/1019.png');
+    color: var(--white);
+    font-family: var(--main-font);
+    font-size: var(--main-size);
 }
 
 a {
-    color: darkorange;
-    font-size: 14px;
+    color: var(--darkorange);
+    font-size: var(--main-size);
     text-decoration: none;
 }
 
 a:hover {
-    color: white;
+    color: var(--white);
 }
 
 a:visited {
-    color: orange;
+    color: var(--orange);
 }
 
 header {
@@ -38,8 +60,8 @@ header img {
     position: relative;
     z-index: 1;
     width: 1500px;
-    background-color: black;
-    border: 2px dotted white;
+    background-color: var(--black);
+    border: 2px dotted var(--white);
     border-radius: 20px;
     transform: translateY(-120px);
     margin: 0 auto;
@@ -76,8 +98,8 @@ header img {
 
 .main {
     flex: 1;
-    background-color: #202020;
-    color: white;
+    background-color: var(--darkgray);
+    color: var(--white);
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
@@ -100,30 +122,39 @@ header img {
     box-sizing: border-box;
 }
 
+#font-toggle {
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid var(--white);
+    background-color: var(--dimgray);
+    color: var(--white);
+}
+
 .widget-top {
     text-align: center;
     width: 75%;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 2px dashed white;
+    border-bottom: 2px dashed var(--white);
 }
 
 .menu a {
-    color: darkorange;
-    font-size: 14px;
+    color: var(--darkorange);
+    font-size: var(--main-size);
 }
 
 .menu li::before {
     content: "\1F480";
-    color: white;
+    color: var(--white);
     display: inline-block;
     margin-right: 0.25em;
 }
 
 .updates {
-    background: dimgray;
-    color: white;
-    font-size: 12px;
+    background: var(--dimgray);
+    color: var(--white);
+    font-family: var(--main-font);
+    font-size: var(--main-size);
 }
 
 .widget-top-right {
@@ -132,11 +163,11 @@ header img {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-right: 10px;
-    border-bottom: 2px dashed white;
+    border-bottom: 2px dashed var(--white);
 }
 
 .welcome {
-    border: 1px dashed white;
+    border: 1px dashed var(--white);
     border-radius: 20px;
     padding-left: 15px;
     padding-right: 7px;
@@ -185,8 +216,8 @@ header img {
 }
 
 .review-info {
-        border: medium double white;
-        background-color: dimgray;
+        border: medium double var(--white);
+        background-color: var(--dimgray);
         margin-bottom: 2.5em;
         min-height: 15.625em;
         padding-top: .9375em;

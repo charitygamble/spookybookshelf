@@ -31,6 +31,8 @@
             <h3 class="widget-top">Fave Sites</h3>
             <a href="https://petrapixel.neocities.org" target="_blank"><img src="../assets/linkies/petrapixel.webp" alt="PetraPixel"></a>
             <a href="https://readingproject.au" target="_blank"><img src="../assets/linkies/ReadingProjectButton2.png" alt="The Reading Project"></a>
+            <a href="https://seafare.neocities.org" target="_blank"><img src="../assets/linkies/seafare.png" alt="Seafare"></a>
+            <a href="https://starry-knight.neocities.org" target="_blank"><img src="../assets/linkies/starrysgrove.png" alt="Starry's Grove"></a>
            </aside>
            <main class="main">
            <h3>The Bachelorette Party by Carissa Ann Lynch</h3>
@@ -106,6 +108,9 @@ The groom’s friend</p>
 </div>
            </main>
            <aside class="right-bar">
+            <h3 class="widget-top">Switch Fonts</h3>
+            Make the font more readable<br><br>
+            <button id="font-toggle" onclick="forceFontToggle()">Switch Font</button>
             <h3 class="widget-top">Current Mood</h3>
             <a href="https://www.imood.com/users/thespookybookshelf"><img src="https://moods.imood.com/display/uname-thespookybookshelf/fg-ffffff/bg-000000/imood.gif" alt="The current mood of thespookybookshelf at www.imood.com"></a>
             <h3 class="widget-top">Guestbook</h3>
@@ -114,5 +119,27 @@ The groom’s friend</p>
             <script type="text/javascript" src="https://counter.websiteout.com/js/35/0/0/0"></script>
            </aside>
         </div>
+<script>
+  function forceFontToggle() {
+    console.log("Function called directly from the button!");
+    
+    // Toggle the class on the body
+    const body = document.body;
+    body.classList.toggle('readable-font');
+    
+    // Check if it worked
+    const isReadable = body.classList.contains('readable-font');
+    console.log("Is readable-font active?", isReadable);
+
+    // Update the button text
+    const btn = document.getElementById('font-toggle');
+    if (btn) {
+      btn.textContent = isReadable ? "Switch to Rainy Hearts" : "Switch to Tahoma";
+    }
+  }
+
+  // Optional: Check if the button even exists when the page loads
+  console.log("Script loaded. Button found on load?", !!document.getElementById('font-toggle'));
+</script>
     </body>
 </html>
