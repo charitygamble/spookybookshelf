@@ -1,0 +1,226 @@
+
+body {
+    background: black url('/assets/images/1019.png');
+    color: white;
+    font-family: Tahoma, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    color: darkorange;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+a:visited {
+    color: orange;
+}
+
+header {
+    position: relative;
+    z-index: 10;
+    margin: 0;
+}
+
+header img {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+    width: 1500px;
+    background-color: black;
+    border: 2px dotted white;
+    border-radius: 20px;
+    transform: translateY(-120px);
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    box-sizing: border-box;
+    align-items: stretch;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.left-bar {
+    flex: 0 0 calc(20% - 13.33px);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80px;
+    text-align: center;
+    padding-top: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.left-bar ul {
+    padding-left: 0px;
+    list-style-type: none;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.main {
+    flex: 1;
+    background-color: #202020;
+    color: white;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 40px;
+}
+
+.right-bar {
+    flex: 0 0 calc(20% - 13.33px);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80px;
+    text-align: center;
+    padding-top: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.widget-top {
+    text-align: center;
+    width: 75%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed white;
+}
+
+.menu a {
+    color: darkorange;
+    font-size: 14px;
+}
+
+.menu li::before {
+    content: "\1F480";
+    color: white;
+    display: inline-block;
+    margin-right: 0.25em;
+}
+
+.updates {
+    background: dimgray;
+    color: white;
+    font-size: 12px;
+}
+
+.widget-top-right {
+    text-align: center;
+    width: 75%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    border-bottom: 2px dashed white;
+}
+
+.welcome {
+    border: 1px dashed white;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 7px;
+}
+
+.blinkies-home {
+    display: block;
+    text-align: center;
+}
+
+.about-me {
+    display: flow-root;
+}
+
+.about-me img {
+    float: left;
+    height: 25%;
+    width: 25%;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.about-me li {
+    list-style-type: none;
+}
+
+.bottom-of-the-page {
+    margin-bottom: 20px;
+}
+.fun-thing {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    max-width: 200px;
+    display: block;
+    text-align: center;
+}
+
+.last-one {
+    margin-bottom: 20px;
+}
+
+.no-bullet {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+.review-info {
+        border: medium double white;
+        background-color: dimgray;
+        margin-bottom: 2.5em;
+        min-height: 15.625em;
+        padding-top: .9375em;
+        margin-left: .8125em;
+        margin-top: 1.875em;
+        clear: left;
+    }
+
+.review-info img {
+    float: left;
+    padding-right: .9375em;
+    margin-top: -30px;
+    margin-left: -15px;
+    margin-bottom: 10px;
+    height: auto;
+    max-width: 25%;
+    }
+
+    .review-description {
+    padding-top: .25em;
+    padding-left: 10px;
+    padding-right: 5px;
+    margin-top: 10px;
+}
+
+.review-description li {
+    list-style-type: none;
+}
+
+.the_review {
+    margin-left: .8125em;
+    margin-bottom: 20px;
+}
+
+
+
+
