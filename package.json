@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve"
+    "start": "npx @11ty/eleventy --serve",
+    "clean:ghosts": "find . -name '* [0-9].*' -delete",
+    "clean:public": "rm -rf public"
   },
   "keywords": [],
   "author": "",
