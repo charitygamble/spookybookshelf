@@ -1,0 +1,277 @@
+@font-face {
+    font-family: 'rainyhearts';
+    src: url("/assets/fonts/rainyhearts.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --main-font: 'rainyhearts', monospace, sans-serif;
+    --main-size: 18px;
+    --darkorange: darkorange;
+    --orange: orange;
+    --white: white;
+    --dimgray: dimgray;
+    --darkgray: #202020;
+    --black: black;
+}
+
+body.readable-font {
+    --main-font: 'Tahoma', sans-serif;
+    --main-size: 14px;
+}
+
+body {
+    background: var(--black) url('/assets/images/1019.png');
+    color: var(--white);
+    font-family: var(--main-font);
+    font-size: var(--main-size);
+    padding-bottom: 20px;
+    gap: 0;
+}
+
+a {
+    color: var(--darkorange);
+    font-size: var(--main-size);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--white);
+}
+
+a:visited {
+    color: var(--orange);
+}
+
+header {
+    position: relative;
+    z-index: 10;
+    margin: 0;
+}
+
+header img {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+    width: 1500px;
+    transform: translateY(-120px);
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    box-sizing: border-box;
+    align-items: stretch;
+    overflow: hidden;
+    min-height: calc(100vh - 430px);
+    margin-bottom: 20px;
+}
+
+.wrapper::after {
+    content: "";
+    display: table;
+    display: flow-root;
+}
+
+.footer {
+    position: relative;
+    margin: -100px auto 20px;
+    width: 750px;
+    border: 2px solid var(--white);
+    background-color: var(--black);
+    text-align: center;
+    padding: 10px;
+}
+
+.left-bar {
+    flex: 0 0 calc(20% - 13.33px);
+    display: flex;
+    border: 2px solid var(--white);
+    background-color: var(--black);
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80px;
+    text-align: center;
+    padding-top: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.left-bar ul {
+    padding-left: 0px;
+    list-style-type: none;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.main {
+    flex: 1;
+    background-color: var(--black);
+    border: 2px solid var(--white);
+    color: var(--white);
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 40px;
+}
+
+.right-bar {
+    flex: 0 0 calc(20% - 13.33px);
+    display: flex;
+    justify-content: flex-start;
+    border: 2px solid var(--white);
+    background-color: var(--black);
+    flex-direction: column;
+    align-items: center;
+    min-height: 80px;
+    text-align: center;
+    padding-top: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+#font-toggle {
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid var(--white);
+    background-color: var(--dimgray);
+    color: var(--white);
+}
+
+.widget-top {
+    text-align: center;
+    width: 75%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed var(--white);
+}
+
+.menu a {
+    color: var(--darkorange);
+    font-size: var(--main-size);
+}
+
+.menu li::before {
+    content: "\1F480";
+    color: var(--white);
+    display: inline-block;
+    margin-right: 0.25em;
+}
+
+.updates {
+    background: var(--dimgray);
+    color: var(--white);
+    font-family: var(--main-font);
+    font-size: var(--main-size);
+}
+
+.widget-top-right {
+    text-align: center;
+    width: 75%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    border-bottom: 2px dashed var(--white);
+}
+
+.welcome {
+    border: 1px dashed var(--white);
+    padding-left: 15px;
+    padding-right: 7px;
+}
+
+.blinkies-home {
+    display: block;
+    text-align: center;
+}
+
+.about-me {
+    display: flow-root;
+}
+
+.about-me img {
+    float: left;
+    height: 25%;
+    width: 25%;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.about-me li {
+    list-style-type: none;
+}
+
+.bottom-of-the-page {
+    margin-bottom: 20px;
+}
+.fun-thing {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    max-width: 400px;
+    display: block;
+    text-align: center;
+}
+
+.last-one {
+    margin-bottom: 20px;
+}
+
+.no-bullet {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+.review-info {
+        border: medium double var(--white);
+        background-color: var(--dimgray);
+        margin-bottom: 2.5em;
+        min-height: 15.625em;
+        padding-top: .9375em;
+        margin-left: .8125em;
+        margin-top: 1.875em;
+        clear: left;
+    }
+
+.review-info img {
+    float: left;
+    padding-right: .9375em;
+    margin-top: -30px;
+    margin-left: -15px;
+    margin-bottom: 10px;
+    height: auto;
+    max-width: 25%;
+    }
+
+    .review-description {
+    padding-top: .25em;
+    padding-left: 10px;
+    padding-right: 5px;
+    margin-top: 10px;
+}
+
+.review-description li {
+    list-style-type: none;
+}
+
+.the_review {
+    margin-left: .8125em;
+    margin-bottom: 20px;
+}
+
+
+
+
