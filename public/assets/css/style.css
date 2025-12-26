@@ -117,6 +117,7 @@ header img {
 
 .main {
     flex: 1;
+    min-width: 0;
     background-color: var(--black);
     border: 2px solid var(--white);
     color: var(--white);
@@ -220,18 +221,40 @@ header img {
 .bottom-of-the-page {
     margin-bottom: 20px;
 }
-.fun-thing {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-left: 5px;
-    max-width: 400px;
+
+.last-one {
+    margin-bottom: 20px;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.welcome.last-one > div {
+    flex: 1;
+    box-sizing: border-box;
+    min-width: 0;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.welcome.last-one h4 {
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/*.fun-thing {
+    min-width: 0;
     display: block;
     text-align: center;
 }
 
-.last-one {
-    margin-bottom: 20px;
-}
+.fave-sites {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-width: 0;
+    display: block;
+    text-align: center;
+}*/
 
 .no-bullet {
     list-style-type: none;

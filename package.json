@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve",
-    "clean:ghosts": "find . -name '* [0-9].*' -delete",
+    "clean:ghosts": "find ./public/assets -type f -name \"* [0-9]*.*\" -print0 | xargs -0 rm",
     "clean:public": "rm -rf public"
   },
   "keywords": [],
