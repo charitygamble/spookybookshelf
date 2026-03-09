@@ -1,3 +1,8 @@
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 export default function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/assets');
 
@@ -11,6 +16,7 @@ export default function(eleventyConfig) {
         dir: {
             input: 'src',
             output: 'public',
+            includes: '_includes',
         }
     };
 };
