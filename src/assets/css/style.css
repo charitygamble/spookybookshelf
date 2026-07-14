@@ -299,52 +299,126 @@ header img {
     margin-bottom: 20px;
 }
 
+/* --- Hide Mobile Elements on Desktop by default --- */
 .mobile-nav {
     display: none;
 }
 
-/* --- Mobile View Menu and Sidebar Removal --- */
 @media (max-width: 800px) {
-    /* 1. Reset the wrapper layout and pull it back into view */
-    .wrapper {
-        display: block; /* Turns off the horizontal flex layout */
-        transform: none; /* Prevents the site from sliding up under the header */
-        margin-top: 20px;
-        padding: 0 15px;
+    /* 1. Ensure the header stays at the top of the stack and handles its space cleanly */
+    header {
+        position: relative;
+        z-index: 10;
+        margin: 0 0 10px 0;
+        width: 100%;
     }
 
-    /* 2. Hide the sidebars completely on mobile */
+    header img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    body {
+        font-family: "Tahoma";
+    }
+
+    /* 2. The Mobile Dropdown Container - Clean, positive margins so it sits UNDER the header */
+    .mobile-nav {
+        display: block;
+        position: relative;
+        z-index: 100;
+        margin: 10px 15px 20px 15px; /* Cleaned up: no negative margins */
+    }
+
+    /* 3. Reset the wrapper completely so it sits nicely under the menu */
+    .wrapper {
+        display: block; 
+        transform: none; /* Disables the desktop overlap shift completely */
+        margin-top: 10px;
+        padding: 0 15px;
+        position: relative;
+        z-index: 5;
+    }
+
+    /* 4. Hide the sidebars entirely */
     .left-bar, 
     .right-bar {
         display: none;
     }
 
-    /* 3. Force the main content area to take up the full screen width */
+    /* 5. Force the main column to fill the entire screen width */
     .main {
         width: 100%;
         box-sizing: border-box;
-        border-top: none; /* Clean up borders since sidebars are gone */
+        border-top: none;
     }
 
-    /* 4. Fix the footer so it fits mobile screens perfectly */
-    .footer {
-        width: 100%;
-        max-width: 100%;
-        margin: 20px 0;
-        box-sizing: border-box;
+    /* Hide the actual checkbox hack widget */
+    #menu-toggle {
+        display: none;
     }
 
-    /* 5. Create a clean, horizontal navigation menu at the top of the page */
-    .wrapper::before {
-        content: "MENU: ";
-        display: block;
-        font-family: var(--main-font);
+    /* The clickable menu header bar */
+    .menu-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--black);
+        border: 2px solid var(--white);
+        padding: 12px 20px;
+        font-family: "Tahoma";
         font-size: var(--main-size);
         color: var(--white);
-        margin-bottom: 10px;
-        font-weight: bold;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    /* The actual hidden list items */
+    .menu-dropdown {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+        background-color: var(--darkgray);
+        border: 2px solid var(--white);
+        border-top: none;
+        display: none; 
+        flex-direction: column;
+    }
+
+    .menu-dropdown li {
+        border-bottom: 1px dashed var(--dimgray);
+    }
+    
+    .menu-dropdown li:last-child {
+        border-bottom: none;
+    }
+
+    .menu-dropdown a {
+        display: block;
+        padding: 12px;
+        color: var(--darkorange);
+        font-family: "Tahoma";
+        font-size: var(--main-size);
+        text-align: center;
+    }
+
+    /* The Magic CSS Toggle Rule: When checked, show the list items */
+    #menu-toggle:checked ~ .menu-dropdown {
+        display: flex;
+    }
+
+    /* Flip the little arrow upside down when open */
+    #menu-toggle:checked ~ .menu-button .arrow {
+        transform: rotate(180deg);
+    }
+
+    /* Clean up the footer constraints */
+    .footer {
+        width: 100%;
+        max-width: calc(100% - 30px);
+        margin: 20px auto;
+        box-sizing: border-box;
     }
 }
-
-
-
