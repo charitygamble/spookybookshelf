@@ -61,7 +61,8 @@ header img {
 .wrapper {
     position: relative;
     z-index: 1;
-    width: 1500px;
+    max-width: 1500px;
+    width: 100%;
     transform: translateY(-120px);
     margin: 0 auto;
     display: flex;
