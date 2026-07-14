@@ -61,7 +61,8 @@ header img {
 .wrapper {
     position: relative;
     z-index: 1;
-    width: 1500px;
+    max-width: 1500px;
+    width: 100%;
     transform: translateY(-120px);
     margin: 0 auto;
     display: flex;
@@ -298,6 +299,52 @@ header img {
     margin-bottom: 20px;
 }
 
+.mobile-nav {
+    display: none;
+}
+
+/* --- Mobile View Menu and Sidebar Removal --- */
+@media (max-width: 800px) {
+    /* 1. Reset the wrapper layout and pull it back into view */
+    .wrapper {
+        display: block; /* Turns off the horizontal flex layout */
+        transform: none; /* Prevents the site from sliding up under the header */
+        margin-top: 20px;
+        padding: 0 15px;
+    }
+
+    /* 2. Hide the sidebars completely on mobile */
+    .left-bar, 
+    .right-bar {
+        display: none;
+    }
+
+    /* 3. Force the main content area to take up the full screen width */
+    .main {
+        width: 100%;
+        box-sizing: border-box;
+        border-top: none; /* Clean up borders since sidebars are gone */
+    }
+
+    /* 4. Fix the footer so it fits mobile screens perfectly */
+    .footer {
+        width: 100%;
+        max-width: 100%;
+        margin: 20px 0;
+        box-sizing: border-box;
+    }
+
+    /* 5. Create a clean, horizontal navigation menu at the top of the page */
+    .wrapper::before {
+        content: "MENU: ";
+        display: block;
+        font-family: var(--main-font);
+        font-size: var(--main-size);
+        color: var(--white);
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+}
 
 
 
