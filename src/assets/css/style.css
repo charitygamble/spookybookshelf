@@ -22,7 +22,7 @@ body.readable-font {
 }
 
 body {
-    background: var(--black) url('/assets/images/1019.png');
+    background: var(--black) url('/assets/images/vodka_mutini.png');
     color: var(--white);
     font-family: var(--main-font);
     font-size: var(--main-size);
