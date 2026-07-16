@@ -18,5 +18,5 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.html"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
-      - {label: "Date", name: "date", widget: "date", default: ""}
+      - {label: "Date", name: "date", widget: "datetime", default: ""}
       - {label: "Post Body", name: "body", widget: "markdown"}
