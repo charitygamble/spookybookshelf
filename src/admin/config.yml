@@ -2,7 +2,6 @@ backend:
   name: git-gateway
   repo: charitygamble/spookybookshelf
   branch: main # Branch to update
-publish_mode: editorial_workflow
 folder: "src/reviews"
 extension: "html"
 format: "frontmatter"
