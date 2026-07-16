@@ -1,8 +1,9 @@
 ---
 title: The Lamplighter by Crystal J. Bell
+date: 2024-23-05
 ---
 <h3>{{ title }}</h3>
-<p>Posted on May 23, 2024</p>
+<p>Posted on {{ date | date: "%B %d, %Y" }}</p>
 {% include "_partials/_netgalley.html" %}
 
 <div class="review-info">

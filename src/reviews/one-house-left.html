@@ -1,8 +1,9 @@
 ---
 title: One House Left by Vincent Ralph
+date: 2024-17-06
 ---
 <h3>{{ title }}</h3>
-<p>Posted on June 17, 2024</p>
+<p>Posted on {{ date | date: "%B %d, %Y" }}</p>
 {% include "_partials/_netgalley.html" %}
 
 <div class="review-info">

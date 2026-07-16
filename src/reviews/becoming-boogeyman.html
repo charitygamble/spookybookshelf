@@ -1,8 +1,9 @@
 ---
 title: Becoming the Boogeyman by Richard Chizmar
+date: 2023-06-10
 ---
 <h3>{{ title }}</h3>
-<p>Posted on October 06, 2023</p>
+<p>Posted on {{ date | date: "%B %d, %Y" }}</p>
 {% include "_partials/_netgalley.html" %}
 
 <div class="review-info">

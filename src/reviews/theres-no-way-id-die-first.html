@@ -1,8 +1,9 @@
 ---
 title: There's No Way I'd Die First by Lisa Springer
+date: 2023-04-09
 ---
 <h3>{{ title }}</h3>
-<p>Posted on September 04, 2023</p>
+<p>Posted on {{ date | date: "%B %d, %Y" }}</p>
 
 {% include "_partials/_netgalley.html" %}
 

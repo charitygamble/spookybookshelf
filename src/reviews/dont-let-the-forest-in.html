@@ -1,8 +1,9 @@
 ---
 title: Don't Let the Forest In by C. G. Drews
+date: 2025-06-08
 ---
 <h3>{{ title }}</h3>
-<p>Posted on August 6, 2025</p>
+<p>Posted on {{ date | date: "%B %d, %Y" }}</p>
 {% include "_partials/_netgalley.html" %}
 <div class="review-info">
 <img src="../assets/covers/dontlettheforestin.jpg" alt="Don't Let the Forest In Book Cover" class="book-cover">

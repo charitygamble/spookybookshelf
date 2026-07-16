@@ -1,8 +1,9 @@
 ---
 title: Hatchet Girls by Diana Rodriquez Wallach
+date: 2023-15-10
 ---
 <h3>{{ title }}</h3>
-<p>Posted on October 15, 2023</p>
+<p>Posted on {{ date | date: "%B %d, %Y" }}</p>
 {% include "_partials/_netgalley.html" %}
 
 <div class="review-info">

@@ -1,8 +1,9 @@
 ---
 title: The Haunting by Natasha Preston
+date: 2023-20-10
 ---
 <h3>{{ title }}</h3>
-<p>Posted on October 20, 2023</p>
+<p>Posted on {{ date | date: "%B %d, %Y" }}</p>
 {% include "_partials/_netgalley.html" %}
 
 <div class="review-info">

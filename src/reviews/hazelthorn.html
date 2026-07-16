@@ -1,9 +1,10 @@
 ---
 title: Hazelthorn by CG Drews
+date: 2026-09-07
 ---
 <h3>{{ title }}</h3>
 
-<p>Posted on July 9, 2026</p>
+<p>Posted on {{ date | date: "%B %d, %Y" }}</p>
 {% include "_partials/_netgalley.html" %}
 <div class="review-info">
 <img src="../assets/covers/hazelthorn.png" alt="Hazelthorn Book Cover">
