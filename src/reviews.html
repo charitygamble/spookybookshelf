@@ -5,7 +5,11 @@ title: Book Reviews
 <h3>{{ title }}</h3>
 Here is a list of book reviews in order from most recent to oldest:
 <ul>
-    {% for post in collections.reviews reversed %}
-    <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+ {% for post in collections.reviews reversed %}
+    {% if post.data.title %}
+      <li>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>
