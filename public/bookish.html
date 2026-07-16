@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>The Spooky Bookshelf - Bookish Things</title>
         <link href="/assets/css/style.css" rel="stylesheet">
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         <script src="https://kit.fontawesome.com/aaa188427f.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -81,4 +82,15 @@
         </div>
 <script src="../assets/scripts/font.js" defer></script>
     </body>
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </html>
