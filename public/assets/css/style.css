@@ -7,9 +7,9 @@
 
 :root {
     --main-font: 'rainyhearts', monospace, sans-serif;
-    --main-size: 18px;
-    --darkorange: darkorange;
-    --orange: orange;
+    --main-size: 20px;
+    --darkorange: darkorchid;
+    --orange: lavender;
     --white: white;
     --dimgray: dimgray;
     --darkgray: #202020;
@@ -18,7 +18,7 @@
 
 body.readable-font {
     --main-font: 'Tahoma', sans-serif;
-    --main-size: 14px;
+    --main-size: 16px;
 }
 
 body {
@@ -31,7 +31,7 @@ body {
 }
 
 a {
-    color: var(--darkorange);
+    color: var(--orange);
     font-size: var(--main-size);
     text-decoration: none;
 }
@@ -94,7 +94,7 @@ header img {
     flex: 0 0 calc(20% - 13.33px);
     display: flex;
     border: 2px solid var(--white);
-    background-color: var(--darkgray);
+    background-color: var(--black);
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
@@ -121,7 +121,7 @@ header img {
 .main {
     flex: 1;
     min-width: 0;
-    background-color: var(--darkgray);
+    background-color: var(--black);
     border: 2px solid var(--white);
     color: var(--white);
     align-items: center;
@@ -136,7 +136,7 @@ header img {
     display: flex;
     justify-content: flex-start;
     border: 2px solid var(--white);
-    background-color: var(--darkgray);
+    background-color: var(--black);
     flex-direction: column;
     align-items: center;
     min-height: 80px;
@@ -165,7 +165,7 @@ header img {
     width: 75%;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 2px dashed var(--white);
+    border-bottom: 2px dotted var(--darkorange);
 }
 
 .menu a {
