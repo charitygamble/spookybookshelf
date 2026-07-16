@@ -10,7 +10,7 @@ public_folder: "/assets/covers"
 collections:
  - name: "reviews"        #The name of the collection and should match our posts.json file's tag
    label: "Reviews"       #The name of the collection on the CMS itself
-   folder: "reviews      #The folder that our blog posts will be loaded from and saved to
+   folder: "reviews"      #The folder that our blog posts will be loaded from and saved to
    create: true             #Tells the CMS that new posts can be created
    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  #this sets the URL for the post
    fields:
