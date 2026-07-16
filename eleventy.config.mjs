@@ -7,6 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export default function(eleventyConfig) {
   // 1. Assets Passthrough
   eleventyConfig.addPassthroughCopy('src/assets');
+  eleventyConfig.addPassthroughCopy('src/admin');
 
   // 2. Global permalink handling
   eleventyConfig.addGlobalData("permalink", () => {
